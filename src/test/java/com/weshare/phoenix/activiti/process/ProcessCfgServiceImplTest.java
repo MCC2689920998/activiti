@@ -10,31 +10,34 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(properties = "application.properties")
 public class ProcessCfgServiceImplTest {
 
     @Autowired
     ProcessCfgServiceImpl processCfgService;
 
-    @Test
-    public void getProcessEngine() throws Exception {
-        Assert.assertNotNull(processCfgService.getProcessEngine());;
-    }
 
     @Test
     public void getRepositoryService() throws Exception {
+        Assert.assertNotNull(processCfgService.getRepositoryService());;
+
     }
 
     @Test
     public void getRuntimeService() throws Exception {
+        Assert.assertNotNull(processCfgService.getRuntimeService());;
+
     }
 
     @Test
     public void getTaskService() throws Exception {
+        Assert.assertNotNull(processCfgService.getTaskService());;
     }
 
     @Test
     public void getHistoryService() throws Exception {
+        Assert.assertNotNull(processCfgService.getHistoryService());;
+
     }
 
 }
