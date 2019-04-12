@@ -21,7 +21,7 @@ public class ProcessController {
     @RequestMapping(value = "/initProcess",method = RequestMethod.POST)
     public String initProcess(String fileName){
         log.info("process controller receive init process request ");
-        processService.initProcess(fileName);
+        processService.deployFlowChartByFileName(fileName);
         return fileName+"deploy success";
     }
 

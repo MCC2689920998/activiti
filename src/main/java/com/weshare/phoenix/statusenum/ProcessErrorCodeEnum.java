@@ -1,4 +1,4 @@
-package com.weshare.phoenix.activiti.processcode;
+package com.weshare.phoenix.statusenum;
 
 
 /**
@@ -6,24 +6,22 @@ package com.weshare.phoenix.activiti.processcode;
  * @Date: 2019/2/27 12:15
  * @Description:
  */
-public enum ProcessErrorCode {
+public enum ProcessErrorCodeEnum {
 
 
     PROCESS_TASK_REPETITION_CODE(4001L, "存在相同任务"),
     PROCESS_NOT_DEFINITION_CODE(4002L, "流程图未部署");
 
-
-
     private final Long errorCode;
     private final String errorMessage;
 
-    ProcessErrorCode(long errorCode, String errorMessage) {
+    ProcessErrorCodeEnum(long errorCode, String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }
 
-    public static ProcessErrorCode getEnumByCode(Long code) {
-        for (ProcessErrorCode p : values()) {
+    public static ProcessErrorCodeEnum getEnumByCode(Long code) {
+        for (ProcessErrorCodeEnum p : values()) {
             if (p.getCode().equals(code)) {
                 return p;
             }
