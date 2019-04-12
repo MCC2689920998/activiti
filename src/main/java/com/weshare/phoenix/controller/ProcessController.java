@@ -22,7 +22,7 @@ public class ProcessController {
     public String initProcess(String fileName){
         log.info("process controller receive init process request ");
         processService.deployFlowChartByFileName(fileName);
-        return fileName+"deploy success";
+        return fileName+" deploy success";
     }
 
 
