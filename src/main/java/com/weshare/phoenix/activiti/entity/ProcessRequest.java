@@ -11,7 +11,6 @@ import lombok.Data;
 @Data
 @Builder
 public class ProcessRequest {
-    private String phoneNum;
     private String applyId;
     private Boolean riskControlConclusion;
     private String nextNodeCode;
