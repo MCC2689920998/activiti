@@ -1,6 +1,6 @@
-package com.weshare.phoenix.exception;
+package com.weshare.phoenix.server.exception;
 
-import com.weshare.phoenix.statusenum.ProcessErrorCodeEnum;
+import com.weshare.phoenix.server.statusenum.ProcessErrorCodeEnum;
 import lombok.Data;
 
 /**

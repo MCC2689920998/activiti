@@ -1,4 +1,4 @@
-package com.weshare.phoenix.activiti.process;
+package com.weshare.phoenix.server.activiti.process;
 
 import com.weshare.phoenix.SpringBootTestEnvironmental;
 import org.junit.Assert;

@@ -1,16 +1,10 @@
 package com.weshare.phoenix.controller.activiti;
 
-import com.weshare.phoenix.activiti.entity.ProcessRequest;
-import com.weshare.phoenix.activiti.entity.ProcessResponse;
-import com.weshare.phoenix.activiti.process.ProcessServiceImpl;
+import com.weshare.phoenix.server.activiti.process.ProcessServiceImpl;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 
 /**

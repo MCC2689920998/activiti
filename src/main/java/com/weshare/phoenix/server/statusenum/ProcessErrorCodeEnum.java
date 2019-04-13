@@ -1,4 +1,4 @@
-package com.weshare.phoenix.statusenum;
+package com.weshare.phoenix.server.statusenum;
 
 
 /**

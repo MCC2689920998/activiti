@@ -1,7 +1,5 @@
-package com.weshare.phoenix.activiti.entity;
+package com.weshare.phoenix.server.activiti.entity;
 
-import io.swagger.annotations.Api;
-import lombok.Builder;
 import lombok.Data;
 
 /**

@@ -1,7 +1,6 @@
-package com.weshare.phoenix.activiti.process;
+package com.weshare.phoenix.server.activiti.process;
 
 import com.weshare.phoenix.properties.WeShareProcessDataSourceProperties;
-import com.weshare.phoenix.util.EmptyUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.activiti.engine.*;
 import org.springframework.beans.factory.annotation.Autowired;

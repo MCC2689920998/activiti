@@ -1,4 +1,4 @@
-package com.weshare.phoenix.util;
+package com.weshare.phoenix.server.util;
 
 import java.util.HashSet;
 import java.util.List;

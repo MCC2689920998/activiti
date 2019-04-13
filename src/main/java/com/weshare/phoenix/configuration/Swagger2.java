@@ -1,4 +1,4 @@
-package com.weshare.phoenix;
+package com.weshare.phoenix.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

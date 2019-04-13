@@ -1,6 +1,5 @@
-package com.weshare.phoenix.activiti.entity;
+package com.weshare.phoenix.server.activiti.entity;
 
-import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;

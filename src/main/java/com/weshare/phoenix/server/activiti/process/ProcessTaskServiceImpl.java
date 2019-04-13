@@ -1,4 +1,4 @@
-package com.weshare.phoenix.activiti.process;
+package com.weshare.phoenix.server.activiti.process;
 
 import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.task.Task;
