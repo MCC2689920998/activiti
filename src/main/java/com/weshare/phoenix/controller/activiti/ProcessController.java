@@ -5,6 +5,7 @@ import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 
 /**
@@ -13,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Slf4j
-@Api("userController相关api")
-//@ApiIgnore
+@Api("流程部署相关api")
+@ApiIgnore
 public class ProcessController {
 
     @Autowired
