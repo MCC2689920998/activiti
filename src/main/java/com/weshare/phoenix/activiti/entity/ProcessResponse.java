@@ -11,7 +11,6 @@ import java.util.List;
  * @Description:
  */
 @Data
-@Builder
 public class ProcessResponse {
 
     private List<String> executedNodeList;
