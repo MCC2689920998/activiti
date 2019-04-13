@@ -34,7 +34,7 @@ public class Swagger2 {
                 //页面标题
                 .title("weshare aps-server RESTful API")
                 //创建人
-                .contact(new Contact ("weShare", "", ""))
+                .contact(new Contact ("WeShare", "", ""))
                 //版本号
                 .version("1.0")
                 //描述

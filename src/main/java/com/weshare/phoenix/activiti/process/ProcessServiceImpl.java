@@ -144,8 +144,8 @@ public class ProcessServiceImpl {
      * @return
      */
     public void deleteFlowChart(ProcessDefinition processDefinition, boolean flag) {
-        String deploymentId=processDefinition.getDeploymentId();
-        log.warn("delete flow chart, name is {}",processDefinition.getKey());
+        String deploymentId = processDefinition.getDeploymentId();
+        log.warn("delete flow chart, name is {}", processDefinition.getKey());
         processCfgService.
                 getRepositoryService().deleteDeployment(deploymentId, flag);
     }

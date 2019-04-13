@@ -41,14 +41,14 @@ public class ProcessCfgServiceImpl {
     private static ProcessEngine initProcessEngine() {
         ProcessEngineConfiguration processEngineConfiguration;
         processEngineConfiguration = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();
-    //Jdbc设置
+        //Jdbc设置
         processEngineConfiguration.setJdbcDriver(weShareProcessDataSourceProperties.getJdbcDriver());
         processEngineConfiguration.setJdbcUrl(weShareProcessDataSourceProperties.getJdbcUrl());
         processEngineConfiguration.setJdbcUsername(weShareProcessDataSourceProperties.getJdbcUsername());
         processEngineConfiguration.setJdbcPassword(weShareProcessDataSourceProperties.getJdbcPassword());
         processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
         return processEngineConfiguration.buildProcessEngine();
-}
+    }
 
 
     /**
