@@ -1,4 +1,4 @@
-package com.weshare.phoenix.properties;
+package com.weshare.phoenix.configuration.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

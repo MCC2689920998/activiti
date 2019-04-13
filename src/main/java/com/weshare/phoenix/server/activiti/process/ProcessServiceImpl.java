@@ -1,7 +1,7 @@
 package com.weshare.phoenix.server.activiti.process;
 
 
-import com.weshare.phoenix.properties.WeShareProcessProperties;
+import com.weshare.phoenix.configuration.properties.WeShareProcessProperties;
 import com.weshare.phoenix.server.util.CollectionsUtils;
 import com.weshare.phoenix.server.util.EmptyUtils;
 import lombok.extern.slf4j.Slf4j;
