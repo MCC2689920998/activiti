@@ -1,27 +1,23 @@
 package com.weshare.phoenix.server.statusenum;
 
-
 /**
- * @Author: MCC
- * @Date: 2019/2/27 12:15
- * @Description:
+ * @Author MCC
+ * @Create 2019/4/15 18:41
  */
-public enum ProcessErrorCodeEnum {
+public enum ApsErrorCodeEnum {
 
-
-    PROCESS_TASK_REPETITION_CODE(4001L, "存在相同任务"),
-    PROCESS_NOT_DEFINITION_CODE(4002L, "流程图未部署");
+    APS_NODE_ACTUATOR_NULL(3001L, "环节执行器为空");
 
     private Long errorCode;
     private String errorMessage;
 
-    ProcessErrorCodeEnum(long errorCode, String errorMessage) {
+    ApsErrorCodeEnum(long errorCode, String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }
 
-    public static ProcessErrorCodeEnum getEnumByCode(Long code) {
-        for (ProcessErrorCodeEnum p : values()) {
+    public static ApsErrorCodeEnum getEnumByCode(Long code) {
+        for (ApsErrorCodeEnum p : values()) {
             if (p.getCode().equals(code)) {
                 return p;
             }
@@ -40,8 +36,4 @@ public enum ProcessErrorCodeEnum {
     public String getName() {
         return name();
     }
-
-
-
-
 }

@@ -6,12 +6,15 @@ import com.weshare.phoenix.dao.entity.BaseNodeActuatorCfg;
 import com.weshare.phoenix.dao.repository.BaseNodeActuatorCfgRepository;
 import com.weshare.phoenix.server.application.ApplicationService;
 import com.weshare.phoenix.server.exception.ApsException;
+import com.weshare.phoenix.server.statusenum.ApsErrorCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.omg.CORBA.portable.ApplicationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static com.weshare.phoenix.server.statusenum.ApsErrorCodeEnum.APS_NODE_ACTUATOR_NULL;
 
 /**
  * @Author MCC
@@ -27,21 +30,35 @@ public class ApplicationServiceImpl implements ApplicationService<MessageRequest
 
     @Override
     public MessageResponse applicationCommit(MessageRequest messageRequest) throws ApsException {
-        //防止高并发请求
+        String currentNodeCode = messageRequest.getCurrentNodeCode();
+        //防止高并发，重复请求
 
         //获取执行器
         List<BaseNodeActuatorCfg> baseNodeActuatorCfgs = baseNodeActuatorCfgRepository
-                .findBaseNodeActuatorCfgsByNodeCode(messageRequest.getCurrentNodeCode());
+                .findBaseNodeActuatorCfgsByNodeCodeDesc(currentNodeCode);
+        if (baseNodeActuatorCfgs == null || baseNodeActuatorCfgs.size() < 0) {
+            log.warn("{} 环节执行器为空,请查看相关配置", currentNodeCode);
+            throw new ApsException(ApsErrorCodeEnum.APS_NODE_ACTUATOR_NULL);
+        }
         //执行执行器
-        MessageResponse response =executeAllNodeActuator(baseNodeActuatorCfgs);
+        MessageResponse response = executeAllNodeActuator(baseNodeActuatorCfgs);
 
         return response;
     }
 
 
-
-
+    /**
+     * 执行申请执行器
+     *
+     * @param baseNodeActuatorCfgs
+     * @return
+     */
     private MessageResponse executeAllNodeActuator(List<BaseNodeActuatorCfg> baseNodeActuatorCfgs) {
+        for (BaseNodeActuatorCfg b : baseNodeActuatorCfgs) {
+
+
+        }
+
         return new MessageResponse();
     }
 }
